@@ -3,12 +3,11 @@
 `include "internal_defines.vh"
 
 module arm_control(
-	input [31:0] inst,
-	input [31:0] cpsr_out,
+	input wire [31:0] inst,
+	input wire [31:0] cpsr_out,
 	output logic rd_we,
 	output logic pc_we,
 	output logic cpsr_we,
-	// output logic rn_sel,	//1:dcd_rn; 0:dcd_mul_rn
 	output logic rd_sel, 	//1:dcd_rd; 0:dcd_mul_rd
 	output logic rd_data_sel,	//1:alu_result; 0:LD, mem_data
 	output logic halted,
@@ -17,12 +16,10 @@ module arm_control(
 	output logic ld_byte_or_word,	//1: byte; 0: word
 	output logic alu_or_mac,	//1: alu; 0: mac
 	output up_down,			//for LD/ST, calculate mem_addr by add or sub op2
-	output mac_sel, 		//MUL/MULA
-	// output is_for_store,
+	output wire mac_sel, 		//MUL/MULA
 	output logic [2:0] mask_of_real_read_reg,
 	output logic [3:0] read_reg_num [2:0],
-	// output logic swi,
-	output [3:0] alu_sel,
+	output wire [3:0] alu_sel,
 	output logic [3:0] cpsr_mask,
 	output is_alu_for_mem_addr
 );

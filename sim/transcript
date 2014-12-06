@@ -1,0 +1,692 @@
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 3.13.0-40-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading project arm_pipeline_with_forwarding
+# reading /mgc/anacad2009_2c/questasim/v6.5f/linux_x86_64/../modelsim.ini
+# Loading project arm_pipeline_with_forwarding
+# Compile of arm_alu.sv was successful.
+# Compile of arm_barrel_shift.sv was successful.
+# Compile of arm_control.sv was successful.
+# Compile of arm_ex_stage.sv was successful.
+# Compile of arm_forwarding.sv was successful.
+# Compile of arm_id_stage.sv was successful.
+# Compile of arm_if_stage.sv was successful.
+# Compile of arm_mac.sv was successful.
+# Compile of arm_mem.v was successful.
+# Compile of arm_mem_stage.sv was successful.
+# Compile of arm_top.sv was successful.
+# Compile of arm_wb_stage.sv was successful.
+# Compile of hazard_detect.sv was successful.
+# Compile of regfile.v was successful.
+# Compile of testbench.v was successful.
+# 15 compiles, 0 failed with no errors. 
+vsim work.testbench
+# vsim work.testbench 
+# Loading work.testbench
+# Loading work.clock
+# Loading sv_std.std
+# Loading work.arm_top
+# Loading work.arm_if_stage
+# Loading work.arm_id_stage
+# Loading work.hazard_detect
+# Loading work.arm_forwarding
+# Loading work.arm_control
+# Loading work.arm_ex_stage
+# Loading work.arm_barrel_shift
+# Loading work.arm_alu
+# Loading work.arm_mac
+# Loading work.arm_mem_stage
+# Loading work.arm_wb_stage
+# Loading work.regfile
+# Loading work.register
+# Loading work.arm_mem
+add wave \
+{sim/:testbench:top:if_stage:pc } \
+{sim/:testbench:top:if_stage:IFID_Write } \
+{sim/:testbench:top:if_stage:inst } \
+{sim/:testbench:top:if_stage:clk } \
+{sim/:testbench:top:if_stage:next_pc } \
+{sim/:testbench:top:if_stage:IFID_inst } 
+add wave \
+{sim/:testbench:top:id_stage:clk } \
+{sim/:testbench:top:id_stage:rst_b } \
+{sim/:testbench:top:id_stage:inst } \
+{sim/:testbench:top:id_stage:data0 } \
+{sim/:testbench:top:id_stage:data1 } \
+{sim/:testbench:top:id_stage:data2 } \
+{sim/:testbench:top:id_stage:cpsr_out } \
+{sim/:testbench:top:id_stage:EXID_cpsr } \
+{sim/:testbench:top:id_stage:EXID_rd_we } \
+{sim/:testbench:top:id_stage:MEMID_rd_we } \
+{sim/:testbench:top:id_stage:EXID_cpsr_we } \
+{sim/:testbench:top:id_stage:EXID_is_alu_for_mem_addr } \
+{sim/:testbench:top:id_stage:EXID_alu_or_mac } \
+{sim/:testbench:top:id_stage:EXID_forward_data } \
+{sim/:testbench:top:id_stage:MEMID_forward_data } \
+{sim/:testbench:top:id_stage:EXID_rd_num } \
+{sim/:testbench:top:id_stage:MEMID_rd_num } \
+{sim/:testbench:top:id_stage:data0_reg_num } \
+{sim/:testbench:top:id_stage:data1_reg_num } \
+{sim/:testbench:top:id_stage:data2_reg_num } \
+{sim/:testbench:top:id_stage:real_PCWrite } \
+{sim/:testbench:top:id_stage:halted } \
+{sim/:testbench:top:id_stage:IDEX_rs_or_rd_data } \
+{sim/:testbench:top:id_stage:IDEX_rn_data } \
+{sim/:testbench:top:id_stage:IDEX_rm_data } \
+{sim/:testbench:top:id_stage:IDEX_rd_we } \
+{sim/:testbench:top:id_stage:IDEX_cpsr_we } \
+{sim/:testbench:top:id_stage:IDEX_rd_data_sel } \
+{sim/:testbench:top:id_stage:IDEX_is_imm } \
+{sim/:testbench:top:id_stage:IDEX_alu_or_mac } \
+{sim/:testbench:top:id_stage:IDEX_up_down } \
+{sim/:testbench:top:id_stage:IDEX_mac_sel } \
+{sim/:testbench:top:id_stage:IDEX_alu_sel } \
+{sim/:testbench:top:id_stage:IDEX_cpsr_mask } \
+{sim/:testbench:top:id_stage:IDEX_is_alu_for_mem_addr } \
+{sim/:testbench:top:id_stage:IDEX_rd_sel } \
+{sim/:testbench:top:id_stage:IDEX_mem_write_en } \
+{sim/:testbench:top:id_stage:IDEX_ld_byte_or_word } \
+{sim/:testbench:top:id_stage:IDEX_cpsr } \
+{sim/:testbench:top:id_stage:IDEX_inst_11_0 } \
+{sim/:testbench:top:id_stage:IDEX_inst_19_16 } \
+{sim/:testbench:top:id_stage:IDEX_inst_15_12 } \
+{sim/:testbench:top:id_stage:real_IFID_Write } \
+{sim/:testbench:top:id_stage:rd_we } \
+{sim/:testbench:top:id_stage:pc_we } \
+{sim/:testbench:top:id_stage:PCWrite } \
+{sim/:testbench:top:id_stage:cpsr_we } \
+{sim/:testbench:top:id_stage:rd_sel } \
+{sim/:testbench:top:id_stage:rd_data_sel } \
+{sim/:testbench:top:id_stage:is_imm } \
+{sim/:testbench:top:id_stage:mem_write_en } \
+{sim/:testbench:top:id_stage:ld_byte_or_word } \
+{sim/:testbench:top:id_stage:alu_or_mac } \
+{sim/:testbench:top:id_stage:up_down } \
+{sim/:testbench:top:id_stage:mac_sel } \
+{sim/:testbench:top:id_stage:mask_of_real_read_reg } \
+{sim/:testbench:top:id_stage:read_reg_num } \
+{sim/:testbench:top:id_stage:alu_sel } \
+{sim/:testbench:top:id_stage:cpsr_mask } \
+{sim/:testbench:top:id_stage:is_alu_for_mem_addr } \
+{sim/:testbench:top:id_stage:stall } \
+{sim/:testbench:top:id_stage:ctrl_halted } \
+{sim/:testbench:top:id_stage:IFID_Write } \
+{sim/:testbench:top:id_stage:forward_sel } 
+add wave \
+{sim/:testbench:top:if_stage:pc } \
+{sim/:testbench:top:if_stage:IFID_Write } \
+{sim/:testbench:top:if_stage:inst } \
+{sim/:testbench:top:if_stage:clk } \
+{sim/:testbench:top:if_stage:next_pc } \
+{sim/:testbench:top:if_stage:IFID_inst } 
+add wave \
+{sim/:testbench:top:id_stage:clk } \
+{sim/:testbench:top:id_stage:rst_b } \
+{sim/:testbench:top:id_stage:inst } \
+{sim/:testbench:top:id_stage:data0 } \
+{sim/:testbench:top:id_stage:data1 } \
+{sim/:testbench:top:id_stage:data2 } \
+{sim/:testbench:top:id_stage:cpsr_out } \
+{sim/:testbench:top:id_stage:EXID_cpsr } \
+{sim/:testbench:top:id_stage:EXID_rd_we } \
+{sim/:testbench:top:id_stage:MEMID_rd_we } \
+{sim/:testbench:top:id_stage:EXID_cpsr_we } \
+{sim/:testbench:top:id_stage:EXID_is_alu_for_mem_addr } \
+{sim/:testbench:top:id_stage:EXID_alu_or_mac } \
+{sim/:testbench:top:id_stage:EXID_forward_data } \
+{sim/:testbench:top:id_stage:MEMID_forward_data } \
+{sim/:testbench:top:id_stage:EXID_rd_num } \
+{sim/:testbench:top:id_stage:MEMID_rd_num } \
+{sim/:testbench:top:id_stage:data0_reg_num } \
+{sim/:testbench:top:id_stage:data1_reg_num } \
+{sim/:testbench:top:id_stage:data2_reg_num } \
+{sim/:testbench:top:id_stage:real_PCWrite } \
+{sim/:testbench:top:id_stage:halted } \
+{sim/:testbench:top:id_stage:IDEX_rs_or_rd_data } \
+{sim/:testbench:top:id_stage:IDEX_rn_data } \
+{sim/:testbench:top:id_stage:IDEX_rm_data } \
+{sim/:testbench:top:id_stage:IDEX_rd_we } \
+{sim/:testbench:top:id_stage:IDEX_cpsr_we } \
+{sim/:testbench:top:id_stage:IDEX_rd_data_sel } \
+{sim/:testbench:top:id_stage:IDEX_is_imm } \
+{sim/:testbench:top:id_stage:IDEX_alu_or_mac } \
+{sim/:testbench:top:id_stage:IDEX_up_down } \
+{sim/:testbench:top:id_stage:IDEX_mac_sel } \
+{sim/:testbench:top:id_stage:IDEX_alu_sel } \
+{sim/:testbench:top:id_stage:IDEX_cpsr_mask } \
+{sim/:testbench:top:id_stage:IDEX_is_alu_for_mem_addr } \
+{sim/:testbench:top:id_stage:IDEX_rd_sel } \
+{sim/:testbench:top:id_stage:IDEX_mem_write_en } \
+{sim/:testbench:top:id_stage:IDEX_ld_byte_or_word } \
+{sim/:testbench:top:id_stage:IDEX_cpsr } \
+{sim/:testbench:top:id_stage:IDEX_inst_11_0 } \
+{sim/:testbench:top:id_stage:IDEX_inst_19_16 } \
+{sim/:testbench:top:id_stage:IDEX_inst_15_12 } \
+{sim/:testbench:top:id_stage:real_IFID_Write } \
+{sim/:testbench:top:id_stage:rd_we } \
+{sim/:testbench:top:id_stage:pc_we } \
+{sim/:testbench:top:id_stage:PCWrite } \
+{sim/:testbench:top:id_stage:cpsr_we } \
+{sim/:testbench:top:id_stage:rd_sel } \
+{sim/:testbench:top:id_stage:rd_data_sel } \
+{sim/:testbench:top:id_stage:is_imm } \
+{sim/:testbench:top:id_stage:mem_write_en } \
+{sim/:testbench:top:id_stage:ld_byte_or_word } \
+{sim/:testbench:top:id_stage:alu_or_mac } \
+{sim/:testbench:top:id_stage:up_down } \
+{sim/:testbench:top:id_stage:mac_sel } \
+{sim/:testbench:top:id_stage:mask_of_real_read_reg } \
+{sim/:testbench:top:id_stage:read_reg_num } \
+{sim/:testbench:top:id_stage:alu_sel } \
+{sim/:testbench:top:id_stage:cpsr_mask } \
+{sim/:testbench:top:id_stage:is_alu_for_mem_addr } \
+{sim/:testbench:top:id_stage:stall } \
+{sim/:testbench:top:id_stage:ctrl_halted } \
+{sim/:testbench:top:id_stage:IFID_Write } \
+{sim/:testbench:top:id_stage:forward_sel } 
+add wave \
+{sim/:testbench:top:ex_stage:clk } \
+{sim/:testbench:top:ex_stage:IDEX_rd_we } \
+{sim/:testbench:top:ex_stage:IDEX_cpsr_we } \
+{sim/:testbench:top:ex_stage:IDEX_rd_data_sel } \
+{sim/:testbench:top:ex_stage:IDEX_is_imm } \
+{sim/:testbench:top:ex_stage:IDEX_alu_or_mac } \
+{sim/:testbench:top:ex_stage:IDEX_up_down } \
+{sim/:testbench:top:ex_stage:IDEX_mac_sel } \
+{sim/:testbench:top:ex_stage:IDEX_alu_sel } \
+{sim/:testbench:top:ex_stage:IDEX_cpsr_mask } \
+{sim/:testbench:top:ex_stage:IDEX_is_alu_for_mem_addr } \
+{sim/:testbench:top:ex_stage:IDEX_rd_sel } \
+{sim/:testbench:top:ex_stage:IDEX_mem_write_en } \
+{sim/:testbench:top:ex_stage:IDEX_ld_byte_or_word } \
+{sim/:testbench:top:ex_stage:IDEX_cpsr } \
+{sim/:testbench:top:ex_stage:IDEX_inst_11_0 } \
+{sim/:testbench:top:ex_stage:IDEX_inst_19_16 } \
+{sim/:testbench:top:ex_stage:IDEX_inst_15_12 } \
+{sim/:testbench:top:ex_stage:IDEX_rs_or_rd_data } \
+{sim/:testbench:top:ex_stage:IDEX_rn_data } \
+{sim/:testbench:top:ex_stage:IDEX_rm_data } \
+{sim/:testbench:top:ex_stage:IDEX_internal_halted } \
+{sim/:testbench:top:ex_stage:cpsr_result_in_EX } \
+{sim/:testbench:top:ex_stage:cpsr_we } \
+{sim/:testbench:top:ex_stage:EXID_rd_we } \
+{sim/:testbench:top:ex_stage:EXID_rd_num } \
+{sim/:testbench:top:ex_stage:EXID_is_alu_for_mem_addr } \
+{sim/:testbench:top:ex_stage:EXID_alu_or_mac } \
+{sim/:testbench:top:ex_stage:EXID_forward_data } \
+{sim/:testbench:top:ex_stage:EXMEM_data_result } \
+{sim/:testbench:top:ex_stage:EXMEM_rd_data } \
+{sim/:testbench:top:ex_stage:EXMEM_rd_we } \
+{sim/:testbench:top:ex_stage:EXMEM_rd_data_sel } \
+{sim/:testbench:top:ex_stage:EXMEM_des_reg_num } \
+{sim/:testbench:top:ex_stage:EXMEM_mem_write_en } \
+{sim/:testbench:top:ex_stage:EXMEM_internal_halted } \
+{sim/:testbench:top:ex_stage:EXMEM_is_alu_for_mem_addr } \
+{sim/:testbench:top:ex_stage:EXMEM_ld_byte_or_word } \
+{sim/:testbench:top:ex_stage:operand2 } \
+{sim/:testbench:top:ex_stage:potential_cout } \
+{sim/:testbench:top:ex_stage:alu_out } \
+{sim/:testbench:top:ex_stage:alu_cpsr } \
+{sim/:testbench:top:ex_stage:mac_out } \
+{sim/:testbench:top:ex_stage:mac_cpsr } \
+{sim/:testbench:top:ex_stage:final_cpsr_mask } \
+{sim/:testbench:top:ex_stage:tmp_cpsr } 
+add wave \
+{sim/:testbench:top:mem_stage:clk } \
+{sim/:testbench:top:mem_stage:EXMEM_data_result } \
+{sim/:testbench:top:mem_stage:EXMEM_rd_data } \
+{sim/:testbench:top:mem_stage:EXMEM_rd_we } \
+{sim/:testbench:top:mem_stage:EXMEM_rd_data_sel } \
+{sim/:testbench:top:mem_stage:EXMEM_des_reg_num } \
+{sim/:testbench:top:mem_stage:EXMEM_mem_write_en } \
+{sim/:testbench:top:mem_stage:EXMEM_ld_byte_or_word } \
+{sim/:testbench:top:mem_stage:mem_data_out } \
+{sim/:testbench:top:mem_stage:EXMEM_internal_halted } \
+{sim/:testbench:top:mem_stage:EXMEM_is_alu_for_mem_addr } \
+{sim/:testbench:top:mem_stage:mem_addr } \
+{sim/:testbench:top:mem_stage:mem_write_en } \
+{sim/:testbench:top:mem_stage:mem_data_in } \
+{sim/:testbench:top:mem_stage:MEMID_rd_we } \
+{sim/:testbench:top:mem_stage:MEMID_rd_num } \
+{sim/:testbench:top:mem_stage:MEMID_forward_data } \
+{sim/:testbench:top:mem_stage:MEMWB_data_read_from_mem } \
+{sim/:testbench:top:mem_stage:MEMWB_rd_data } \
+{sim/:testbench:top:mem_stage:MEMWB_rd_we } \
+{sim/:testbench:top:mem_stage:MEMWB_rd_data_sel } \
+{sim/:testbench:top:mem_stage:MEMWB_internal_halted } \
+{sim/:testbench:top:mem_stage:MEMWB_des_reg_num } \
+{sim/:testbench:top:mem_stage:word_offset } \
+{sim/:testbench:top:mem_stage:for_modified_mem_data_out } \
+{sim/:testbench:top:mem_stage:modified_mem_data_out } \
+{sim/:testbench:top:mem_stage:modified_mem_data_in } \
+{sim/:testbench:top:mem_stage:data_read_from_mem } 
+add wave \
+{sim/:testbench:top:wb_stage:clk } \
+{sim/:testbench:top:wb_stage:MEMWB_data_read_from_mem } \
+{sim/:testbench:top:wb_stage:MEMWB_rd_data } \
+{sim/:testbench:top:wb_stage:MEMWB_rd_we } \
+{sim/:testbench:top:wb_stage:MEMWB_rd_data_sel } \
+{sim/:testbench:top:wb_stage:MEMWB_des_reg_num } \
+{sim/:testbench:top:wb_stage:WB_data } \
+{sim/:testbench:top:wb_stage:WB_rd_we } \
+{sim/:testbench:top:wb_stage:WB_des_reg_num } 
+add wave \
+{sim/:testbench:top:register_file:rn_num } \
+{sim/:testbench:top:register_file:rm_num } \
+{sim/:testbench:top:register_file:rs_num } \
+{sim/:testbench:top:register_file:rd_num } \
+{sim/:testbench:top:register_file:rd_data } \
+{sim/:testbench:top:register_file:pc_in } \
+{sim/:testbench:top:register_file:cpsr_in } \
+{sim/:testbench:top:register_file:rd_we } \
+{sim/:testbench:top:register_file:pc_we } \
+{sim/:testbench:top:register_file:cpsr_we } \
+{sim/:testbench:top:register_file:clk } \
+{sim/:testbench:top:register_file:rst_b } \
+{sim/:testbench:top:register_file:halted } \
+{sim/:testbench:top:register_file:rn_data } \
+{sim/:testbench:top:register_file:rm_data } \
+{sim/:testbench:top:register_file:rs_data } \
+{sim/:testbench:top:register_file:pc_out } \
+{sim/:testbench:top:register_file:cpsr_out } \
+{sim/:testbench:top:register_file:mem } \
+{sim/:testbench:top:register_file:cpsr } 
+add wave \
+{sim/:testbench:Memory:data_seg[0] } \
+{sim/:testbench:Memory:data_seg[1] } \
+{sim/:testbench:Memory:data_seg[2] } \
+{sim/:testbench:Memory:data_seg[3] } \
+{sim/:testbench:Memory:data_seg[4] } 
+run
+# ** Warning: (vsim-7) Failed to open readmem file "mem.data.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v(221)
+#    Time: 0 fs  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.stack.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v(222)
+#    Time: 0 fs  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.ktext.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v(223)
+#    Time: 0 fs  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.kdata.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v(224)
+#    Time: 0 fs  Iteration: 1  Instance: :testbench:Memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/tong/myProject/ARM_pipeline_with_forwarding/sim/wave.do
+quit -sim
+# Compile of arm_alu.sv was successful.
+# Compile of arm_barrel_shift.sv was successful.
+# Compile of arm_control.sv was successful.
+# Compile of arm_ex_stage.sv was successful.
+# Compile of arm_forwarding.sv was successful.
+# Compile of arm_id_stage.sv was successful.
+# Compile of arm_if_stage.sv was successful.
+# Compile of arm_mac.sv was successful.
+# Compile of arm_mem.v was successful.
+# Compile of arm_mem_stage.sv was successful.
+# Compile of arm_top.sv was successful.
+# Compile of arm_wb_stage.sv was successful.
+# Compile of hazard_detect.sv was successful.
+# Compile of regfile.v was successful.
+# Compile of testbench.v was successful.
+# 15 compiles, 0 failed with no errors. 
+vsim work.testbench
+# vsim work.testbench 
+# Loading work.testbench
+# Loading work.clock
+# Loading sv_std.std
+# Loading work.arm_top
+# Loading work.arm_if_stage
+# Loading work.arm_id_stage
+# Loading work.hazard_detect
+# Loading work.arm_forwarding
+# Loading work.arm_control
+# Loading work.arm_ex_stage
+# Loading work.arm_barrel_shift
+# Loading work.arm_alu
+# Loading work.arm_mac
+# Loading work.arm_mem_stage
+# Loading work.arm_wb_stage
+# Loading work.regfile
+# Loading work.register
+# Loading work.arm_mem
+do /home/tong/myProject/ARM_pipeline_with_forwarding/sim/wave.do
+run
+# ** Warning: (vsim-7) Failed to open readmem file "mem.data.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v(221)
+#    Time: 0 fs  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.stack.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v(222)
+#    Time: 0 fs  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.ktext.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v(223)
+#    Time: 0 fs  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.kdata.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v(224)
+#    Time: 0 fs  Iteration: 1  Instance: :testbench:Memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# Compile of arm_alu.sv was successful.
+# Compile of arm_barrel_shift.sv was successful.
+# Compile of arm_control.sv was successful.
+# Compile of arm_ex_stage.sv was successful.
+# Compile of arm_forwarding.sv was successful.
+# Compile of arm_id_stage.sv was successful.
+# Compile of arm_if_stage.sv was successful.
+# Compile of arm_mac.sv was successful.
+# Compile of arm_mem.v was successful.
+# Compile of arm_mem_stage.sv was successful.
+# Compile of arm_top.sv was successful.
+# Compile of arm_wb_stage.sv was successful.
+# Compile of hazard_detect.sv was successful.
+# Compile of regfile.v was successful.
+# Compile of testbench.v was successful.
+# 15 compiles, 0 failed with no errors. 
+vsim work.testbench
+# vsim work.testbench 
+# Loading work.testbench
+# Loading work.clock
+# Loading sv_std.std
+# Loading work.arm_top
+# Loading work.arm_if_stage
+# Loading work.arm_id_stage
+# Loading work.hazard_detect
+# Loading work.arm_forwarding
+# Loading work.arm_control
+# Loading work.arm_ex_stage
+# Loading work.arm_barrel_shift
+# Loading work.arm_alu
+# Loading work.arm_mac
+# Loading work.arm_mem_stage
+# Loading work.arm_wb_stage
+# Loading work.regfile
+# Loading work.register
+# Loading work.arm_mem
+do /home/tong/myProject/ARM_pipeline_with_forwarding/sim/wave.do
+run
+# ** Warning: (vsim-7) Failed to open readmem file "mem.data.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v(221)
+#    Time: 0 fs  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.stack.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v(222)
+#    Time: 0 fs  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.ktext.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v(223)
+#    Time: 0 fs  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.kdata.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v(224)
+#    Time: 0 fs  Iteration: 1  Instance: :testbench:Memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# --- 18-447 Register file dump ---
+# === Simulation Cycle                 3654 ===
+# R          0	= 0x10000000	( 268435456 )
+# R          1	= 0x000000be	( 190 )
+# R          2	= 0x000001fe	( 510 )
+# R          3	= 0x000003fc	( 1020 )
+# R          4	= 0x000303fc	( 197628 )
+# R          5	= 0x000000ff	( 255 )
+# R          6	= 0x000001fe	( 510 )
+# R          7	= 0x000003fc	( 1020 )
+# R          8	= 0x000303fc	( 197628 )
+# R          9	= 0x00beffff	( 12517375 )
+# R         10	= 0xff0001fe	( 4278190590 )
+# R         11	= 0x0000befc	( 48892 )
+# R         12	= 0x000000be	( 190 )
+# R         13	= 0xffc2ccac	( 4290956460 )
+# R         14	= 0x00000000	( 0 )
+# R         15	= 0x00400078	( 4194424 )
+# CPSR	= 0x00000000	( 0 )
+# --- End register file dump ---
+quit -sim
+# reading /mgc/anacad2009_2c/questasim/v6.5f/linux_x86_64/../modelsim.ini
+# Loading project arm_pipeline
+# Compile of arm_alu.sv was successful.
+# Compile of arm_barrel_shift.sv was successful.
+# Compile of arm_control.sv was successful.
+# Compile of arm_ex_stage.sv was successful.
+# Compile of arm_id_stage.sv was successful.
+# Compile of arm_if_stage.sv was successful.
+# Compile of arm_mac.sv was successful.
+# Compile of arm_mem.v was successful.
+# Compile of arm_mem_stage.sv was successful.
+# Compile of arm_top.sv was successful.
+# Compile of arm_wb_stage.sv was successful.
+# Compile of hazard_detect.sv was successful.
+# Compile of regfile.v was successful.
+# Compile of testbench.v was successful.
+# 14 compiles, 0 failed with no errors. 
+vsim work.testbench
+# vsim work.testbench 
+# Loading work.testbench
+# Loading work.clock
+# Loading sv_std.std
+# Loading work.arm_top
+# Loading work.arm_if_stage
+# Loading work.arm_id_stage
+# Loading work.hazard_detect
+# Loading work.arm_control
+# Loading work.arm_ex_stage
+# Loading work.arm_barrel_shift
+# Loading work.arm_alu
+# Loading work.arm_mac
+# Loading work.arm_mem_stage
+# Loading work.arm_wb_stage
+# Loading work.regfile
+# Loading work.register
+# Loading work.arm_mem
+do /home/tong/myProject/ARM_Pipelining/lab3/sim/wave1.do
+run
+# ** Warning: (vsim-7) Failed to open readmem file "mem.data.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_Pipelining/lab3/sim/src/arm_mem.v(221)
+#    Time: 0 ns  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.stack.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_Pipelining/lab3/sim/src/arm_mem.v(222)
+#    Time: 0 ns  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.ktext.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_Pipelining/lab3/sim/src/arm_mem.v(223)
+#    Time: 0 ns  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.kdata.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_Pipelining/lab3/sim/src/arm_mem.v(224)
+#    Time: 0 ns  Iteration: 1  Instance: :testbench:Memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# Compile of arm_alu.sv was successful.
+# Compile of arm_barrel_shift.sv was successful.
+# Compile of arm_control.sv was successful.
+# Compile of arm_ex_stage.sv was successful.
+# Compile of arm_id_stage.sv was successful.
+# Compile of arm_if_stage.sv was successful.
+# Compile of arm_mac.sv was successful.
+# Compile of arm_mem.v was successful.
+# Compile of arm_mem_stage.sv was successful.
+# Compile of arm_top.sv was successful.
+# Compile of arm_wb_stage.sv was successful.
+# Compile of hazard_detect.sv was successful.
+# Compile of regfile.v was successful.
+# Compile of testbench.v was successful.
+# 14 compiles, 0 failed with no errors. 
+vsim work.testbench
+# vsim work.testbench 
+# Loading work.testbench
+# Loading work.clock
+# Loading sv_std.std
+# Loading work.arm_top
+# Loading work.arm_if_stage
+# Loading work.arm_id_stage
+# Loading work.hazard_detect
+# Loading work.arm_control
+# Loading work.arm_ex_stage
+# Loading work.arm_barrel_shift
+# Loading work.arm_alu
+# Loading work.arm_mac
+# Loading work.arm_mem_stage
+# Loading work.arm_wb_stage
+# Loading work.regfile
+# Loading work.register
+# Loading work.arm_mem
+do /home/tong/myProject/ARM_Pipelining/lab3/sim/wave1.do
+run
+# ** Warning: (vsim-7) Failed to open readmem file "mem.data.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_Pipelining/lab3/sim/src/arm_mem.v(221)
+#    Time: 0 ns  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.stack.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_Pipelining/lab3/sim/src/arm_mem.v(222)
+#    Time: 0 ns  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.ktext.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_Pipelining/lab3/sim/src/arm_mem.v(223)
+#    Time: 0 ns  Iteration: 1  Instance: :testbench:Memory
+# ** Warning: (vsim-7) Failed to open readmem file "mem.kdata.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/tong/myProject/ARM_Pipelining/lab3/sim/src/arm_mem.v(224)
+#    Time: 0 ns  Iteration: 1  Instance: :testbench:Memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# --- 18-447 Register file dump ---
+# === Simulation Cycle                 5562 ===
+# R          0	= 0x10000000	( 268435456 )
+# R          1	= 0x000000be	( 190 )
+# R          2	= 0x000001fe	( 510 )
+# R          3	= 0x000003fc	( 1020 )
+# R          4	= 0x000303fc	( 197628 )
+# R          5	= 0x000000ff	( 255 )
+# R          6	= 0x000001fe	( 510 )
+# R          7	= 0x000003fc	( 1020 )
+# R          8	= 0x000303fc	( 197628 )
+# R          9	= 0x00beffff	( 12517375 )
+# R         10	= 0xff0001fe	( 4278190590 )
+# R         11	= 0x0000befc	( 48892 )
+# R         12	= 0x000000be	( 190 )
+# R         13	= 0xffc2cbee	( 4290956270 )
+# R         14	= 0x00000000	( 0 )
+# R         15	= 0x00400078	( 4194424 )
+# CPSR	= 0x00000000	( 0 )
+# --- End register file dump ---
+quit

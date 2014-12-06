@@ -87,6 +87,11 @@ wire [3:0] MEMWB_des_reg_num;
 wire [31:0] WB_data;
 wire WB_rd_we;
 wire [3:0] WB_des_reg_num;
+wire EXID_is_alu_for_mem_addr;
+wire EXID_alu_or_mac;
+wire [31:0] EXID_forward_data;
+wire [31:0] MEMID_forward_data;
+wire EXMEM_is_alu_for_mem_addr;
 
 assign inst_addr = pc_from_regfile[31:2];
 
@@ -111,6 +116,10 @@ arm_id_stage id_stage(
 	.EXID_rd_we(EXID_rd_we),
 	.MEMID_rd_we(MEMID_rd_we),
 	.EXID_cpsr_we(EXID_cpsr_we),
+	.EXID_is_alu_for_mem_addr(EXID_is_alu_for_mem_addr),
+	.EXID_alu_or_mac(EXID_alu_or_mac),
+	.EXID_forward_data(EXID_forward_data),
+	.MEMID_forward_data(MEMID_forward_data),
 	.EXID_rd_num(EXID_rd_num),
 	.MEMID_rd_num(MEMID_rd_num),
 	.data0_reg_num(data0_reg_num),
@@ -168,6 +177,9 @@ arm_ex_stage ex_stage(
 	.cpsr_we(EXID_cpsr_we),
 	.EXID_rd_we(EXID_rd_we),
 	.EXID_rd_num(EXID_rd_num),
+	.EXID_is_alu_for_mem_addr(EXID_is_alu_for_mem_addr),
+	.EXID_alu_or_mac(EXID_alu_or_mac),
+	.EXID_forward_data(EXID_forward_data),
 	.EXMEM_data_result(EXMEM_data_result),
 	.EXMEM_rd_data(EXMEM_rd_data),
 	.EXMEM_rd_we(EXMEM_rd_we),
@@ -175,6 +187,7 @@ arm_ex_stage ex_stage(
 	.EXMEM_des_reg_num(EXMEM_des_reg_num),
 	.EXMEM_mem_write_en(EXMEM_mem_write_en),
 	.EXMEM_internal_halted(EXMEM_internal_halted),
+	.EXMEM_is_alu_for_mem_addr(EXMEM_is_alu_for_mem_addr),
 	.EXMEM_ld_byte_or_word(EXMEM_ld_byte_or_word)
 );
 
@@ -189,11 +202,13 @@ arm_mem_stage mem_stage (
 	.EXMEM_ld_byte_or_word(EXMEM_ld_byte_or_word),
 	.mem_data_out(mem_data_out),
 	.EXMEM_internal_halted(EXMEM_internal_halted),
+	.EXMEM_is_alu_for_mem_addr(EXMEM_is_alu_for_mem_addr),
 	.mem_addr(mem_addr),
 	.mem_data_in(mem_data_in),
 	.mem_write_en(mem_write_en),
 	.MEMID_rd_we(MEMID_rd_we),
 	.MEMID_rd_num(MEMID_rd_num),
+	.MEMID_forward_data(MEMID_forward_data),
 	.MEMWB_data_read_from_mem(MEMWB_data_read_from_mem),
 	.MEMWB_rd_data(MEMWB_rd_data),
 	.MEMWB_rd_we(MEMWB_rd_we),

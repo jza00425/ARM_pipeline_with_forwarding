@@ -1,0 +1,316 @@
+m255
+K3
+13
+cModel Technology
+d/home/tong/myProject/ARM_Pipelining/lab3/sim
+varm_alu
+Z0 Mx1 6 sv_std 3 std
+Z1 DXx6 sv_std 3 std 0 22 WnQ=;W1X^o9K1PIQTgInR3
+IHoGzZcHBQ:DB;gl<HW3zI0
+VBnjb_QQ7Z3H8Cloh8@I@U3
+S1
+Z2 d/home/tong/myProject/ARM_pipeline_with_forwarding/sim
+Z3 w1417791922
+8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_alu.sv
+F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_alu.sv
+L0 6
+Z4 OL;L;6.5f;42
+r1
+31
+Z5 !s102 -nocovercells
+Z6 o-work work -sv -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+Z7 !s92 -work work -sv +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+!s100 Y@Q0UF352Ehblmom_>i5G0
+!s85 0
+varm_barrel_shift
+Z8 Mx1 6 sv_std 3 std
+R1
+I7B0hKK8hL3dOj[X70646c2
+Vb32iFEVAob:1EP=Q<fU?V3
+S1
+R2
+R3
+8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_barrel_shift.sv
+F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_barrel_shift.sv
+L0 7
+R4
+r1
+31
+R5
+R6
+R7
+!s100 df2^^RElM255ceYIEE4KH2
+!s85 0
+varm_control
+R8
+R1
+IN;T5U=dedY2`G<R11Vm3P0
+VKf@?^Fea;W=9BkUSkQaIj0
+S1
+R2
+w1417888032
+8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_control.sv
+F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_control.sv
+L0 5
+R4
+r1
+31
+R5
+R6
+R7
+!s100 55CzBBZ9^JB_ec^cViKz33
+!s85 0
+varm_ex_stage
+R8
+R1
+IX;@I7Q7VBMQ=P>achj?9Y1
+V^i^Y22z9@W8<3:FH[=8O`3
+S1
+R2
+w1417894183
+8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_ex_stage.sv
+F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_ex_stage.sv
+L0 5
+R4
+r1
+31
+R5
+R6
+R7
+!s100 l2dn_M4]C2IXGCB6YlmHC2
+!s85 0
+varm_forwarding
+R8
+R1
+IWiENCUBCneoU6V2UC2kJL0
+Vm:HXVTcd4a4Uec6nH88Ro3
+S1
+R2
+w1417893246
+8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_forwarding.sv
+F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_forwarding.sv
+L0 5
+R4
+r1
+31
+R5
+R6
+R7
+!s100 =UCCb1e6EehM_;@<GQ]DH3
+!s85 0
+varm_id_stage
+R8
+R1
+IELkFeHNDNni;4jaD8:RMj2
+V_eNhZRLh6Yoo?1ZMb<59:2
+S1
+R2
+w1417898161
+8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_id_stage.sv
+F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_id_stage.sv
+L0 5
+R4
+r1
+31
+R5
+R6
+R7
+!s100 4iFj[ViRSK6^5LnB4^ked2
+!s85 0
+varm_if_stage
+R8
+R1
+IX:=`KY=ki<k7ACY9Z8FjO0
+VBJ90ZSnB3<X`6lQQG?aDQ1
+S1
+R2
+R3
+8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_if_stage.sv
+F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_if_stage.sv
+L0 2
+R4
+r1
+31
+R5
+R6
+R7
+!s100 ^2fgL4HBi]:6k:clRQKef0
+!s85 0
+varm_mac
+R8
+R1
+IfX8NNdQ4=Qo>c3d=iYYUH3
+VP`1B5iDgZHcJa:Dmh`HWo2
+S1
+R2
+R3
+8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mac.sv
+F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mac.sv
+L0 5
+R4
+r1
+31
+R5
+R6
+R7
+!s100 UMjkXPji?7CbKcz[P0FCU2
+!s85 0
+varm_mem
+IOOFReFjbh[jc4iQh=P12f0
+V6gM;OHhchlhkBBLm<ec4N1
+R2
+R3
+8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v
+F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v
+L0 72
+R4
+r1
+31
+R5
+Z9 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+Z10 !s92 -work work +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+!s100 7iZDz_FIbOh;Y`jM_b2PZ2
+!s85 0
+varm_mem_stage
+R8
+R1
+IC]URNoJeed``EoW5zdm662
+VY6jcf[cNOSMJm2SfL`]`K0
+S1
+R2
+w1417899082
+8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem_stage.sv
+F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem_stage.sv
+L0 5
+R4
+r1
+31
+R5
+R6
+R7
+!s100 NXIL@?CMN@Sj7d;4`b;@V2
+!s85 0
+varm_top
+R8
+R1
+ICc]=6lAkGM2VmHUfR5WDk0
+Vb=F59lCmgT_8^9[EBYCJZ1
+S1
+R2
+Z11 w1417892585
+Z12 8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_top.sv
+Z13 F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_top.sv
+L0 21
+R4
+r1
+31
+R5
+R6
+R7
+!s100 YeD7fm6@bX?AiJWhMQFm@0
+!s85 0
+varm_wb_stage
+R8
+R1
+IiRLj8_YRi82`V3nzA4?1<0
+VUamH^d=EeT]GLYfK;hTI72
+S1
+R2
+R3
+8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_wb_stage.sv
+F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_wb_stage.sv
+L0 5
+R4
+r1
+31
+R5
+R6
+R7
+!s100 RX2ALmiQ2n1aM5B?FhzJd2
+!s85 0
+vclock
+!s100 @UnIO=555zeaS:5Djh7e53
+IU5B3BGN]B8VM@l:7DQoeY1
+VE:;PMo@@7=HSMoa^X;`RG3
+R2
+R3
+Z14 8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/testbench.v
+Z15 F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/testbench.v
+L0 93
+R4
+r1
+!s85 0
+31
+R5
+R9
+R10
+vhazard_detect
+R8
+R1
+IFV0UT4R>543`[;i;M6d4[1
+VJ2n?3P4Q6Ef0`CgdDnjSS2
+S1
+R2
+w1417893292
+8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/hazard_detect.sv
+F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/hazard_detect.sv
+L0 5
+R4
+r1
+31
+R5
+R6
+R7
+!s100 6f=VU`_>00@@X[3<RfI[c2
+!s85 0
+vregfile
+I?o]]lQR6=M:dQT2R<aUFK2
+V3ZYR1AhCB`2<hBgO;NX9L0
+R2
+R3
+8/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/regfile.v
+F/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/regfile.v
+L0 34
+R4
+r1
+31
+R5
+R9
+R10
+!s100 `h`O@z<Id@YQoCa]:OOeS1
+!s85 0
+vregister
+R8
+R1
+IG@gC9>3UMYHni>[il`7Ih1
+VEaBzRJg7MDcJbnNQR0;?13
+S1
+R2
+R11
+R12
+R13
+L0 4
+R4
+r1
+31
+R5
+R6
+R7
+!s100 Hm[T:ThbS<FfXl;mLMKUS0
+!s85 0
+vtestbench
+!s100 e2NYl]CKYiDfZzjXiEHKX0
+I<QOl?``jXW]g;3ITA06Nb3
+VhGfW:390DM[oDMzegDH9`2
+R2
+R3
+R14
+R15
+L0 41
+R4
+r1
+!s85 0
+31
+R5
+R9
+R10

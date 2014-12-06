@@ -1,0 +1,108 @@
+/home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_control.sv {1 {vlog -work work -novopt -sv +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_control.sv
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module arm_control
+
+Top level modules:
+	arm_control
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem_stage.sv {1 {vlog -work work -novopt -sv +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem_stage.sv
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module arm_mem_stage
+
+Top level modules:
+	arm_mem_stage
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/hazard_detect.sv {1 {vlog -work work -novopt -sv +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/hazard_detect.sv
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module hazard_detect
+
+Top level modules:
+	hazard_detect
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_forwarding.sv {1 {vlog -work work -novopt -sv +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_forwarding.sv
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module arm_forwarding
+
+Top level modules:
+	arm_forwarding
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/regfile.v {1 {vlog -work work -novopt +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/regfile.v
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module regfile
+
+Top level modules:
+	regfile
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_wb_stage.sv {1 {vlog -work work -novopt -sv +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_wb_stage.sv
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module arm_wb_stage
+
+Top level modules:
+	arm_wb_stage
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/testbench.v {1 {vlog -work work -novopt +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/testbench.v
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module testbench
+-- Compiling module clock
+
+Top level modules:
+	testbench
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_id_stage.sv {1 {vlog -work work -novopt -sv +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_id_stage.sv
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module arm_id_stage
+
+Top level modules:
+	arm_id_stage
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_ex_stage.sv {1 {vlog -work work -novopt -sv +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_ex_stage.sv
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module arm_ex_stage
+
+Top level modules:
+	arm_ex_stage
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mac.sv {1 {vlog -work work -novopt -sv +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mac.sv
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module arm_mac
+
+Top level modules:
+	arm_mac
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_alu.sv {1 {vlog -work work -novopt -sv +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_alu.sv
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module arm_alu
+
+Top level modules:
+	arm_alu
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_if_stage.sv {1 {vlog -work work -novopt -sv +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_if_stage.sv
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module arm_if_stage
+
+Top level modules:
+	arm_if_stage
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_top.sv {1 {vlog -work work -novopt -sv +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_top.sv
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module register
+-- Compiling module arm_top
+
+Top level modules:
+	arm_top
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v {1 {vlog -work work -novopt +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_mem.v
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module arm_mem
+
+Top level modules:
+	arm_mem
+
+} {} {}} /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_barrel_shift.sv {1 {vlog -work work -novopt -sv +incdir+/home/tong/myProject/ARM_pipeline_with_forwarding/src -nocovercells /home/tong/myProject/ARM_pipeline_with_forwarding/sim/src/arm_barrel_shift.sv
+QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module arm_barrel_shift
+
+Top level modules:
+	arm_barrel_shift
+
+} {} {}}

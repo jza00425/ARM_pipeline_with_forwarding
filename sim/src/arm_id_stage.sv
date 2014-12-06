@@ -14,6 +14,10 @@ module arm_id_stage (
 	input wire EXID_rd_we,
 	input wire MEMID_rd_we,
 	input wire EXID_cpsr_we,
+	input wire EXID_is_alu_for_mem_addr,
+	input wire EXID_alu_or_mac,
+	input wire [31:0] EXID_forward_data,
+	input wire [31:0] MEMID_forward_data,
 	input wire [3:0] EXID_rd_num,
 	input wire [3:0] MEMID_rd_num,
 	output wire [3:0] data0_reg_num,
@@ -64,6 +68,7 @@ wire is_alu_for_mem_addr;
 wire stall;
 wire ctrl_halted;
 wire IFID_Write;
+wire [1:0] forward_sel [0:2];
 
 assign real_PCWrite = pc_we & PCWrite;
 assign real_IFID_Write = IFID_Write & ~ctrl_halted;
@@ -76,12 +81,27 @@ hazard_detect detector (
 	.mask_of_real_read_reg(mask_of_real_read_reg),
 	.read_reg_num(read_reg_num),
 	.IDEX_rd_we(EXID_rd_we),
-	.EXMEM_rd_we(MEMID_rd_we),
+	.IDEX_is_alu_for_mem_addr(EXID_is_alu_for_mem_addr),
+	// .EXMEM_rd_we(MEMID_rd_we),
 	.IDEX_rd_num(EXID_rd_num),
-	.EXMEM_rd_num(MEMID_rd_num),
+	// .EXMEM_rd_num(MEMID_rd_num),
 	.stall(stall),
 	.IFID_Write(IFID_Write),
 	.PCWrite(PCWrite)
+);
+
+arm_forwarding forwarding (
+	.data0_reg_num(read_reg_num[0]),
+	.data1_reg_num(read_reg_num[1]),
+	.data2_reg_num(read_reg_num[2]),
+	.mask_of_real_read_reg(mask_of_real_read_reg),
+	.EXID_rd_we(EXID_rd_we),
+	.MEMID_rd_we(MEMID_rd_we),
+	.EXID_rd_num(EXID_rd_num),
+	.MEMID_rd_num(MEMID_rd_num),
+	.EXID_alu_or_mac(EXID_alu_or_mac),
+	.EXID_is_alu_for_mem_addr(EXID_is_alu_for_mem_addr),
+	.forward(forward_sel)
 );
 
 arm_control ctrl (
@@ -169,9 +189,11 @@ always_ff @ (posedge clk) begin
 		IDEX_inst_11_0 <= inst[11:0];
 		IDEX_inst_19_16 <= inst[19:16];
 		IDEX_inst_15_12 <= inst[15:12];
-		IDEX_rs_or_rd_data <= data2;
-		IDEX_rn_data <= data0;
-		IDEX_rm_data <= data1;
+		// IDEX_rs_or_rd_data <= data2;
+		IDEX_rs_or_rd_data <= (forward_sel[2] == 2'b01) ? EXID_forward_data: ((forward_sel[2] == 2'b10) ? MEMID_forward_data : data2);
+		IDEX_rn_data <= (forward_sel[0] == 2'b01) ? EXID_forward_data: ((forward_sel[0] == 2'b10) ? MEMID_forward_data : data0);
+		IDEX_rm_data <= (forward_sel[1] == 2'b01) ? EXID_forward_data: ((forward_sel[1] == 2'b10) ? MEMID_forward_data : data1);
+		// IDEX_rm_data <= data1;
 		halted <= ctrl_halted;
 	end
 end
