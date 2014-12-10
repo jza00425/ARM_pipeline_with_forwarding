@@ -44,16 +44,17 @@ module testbench;
    reg [29:0] addr;
 
    wire       clk, inst_excpt, mem_excpt, halted;
+   wire       reg_mem_clk;
    wire [29:0] pc, mem_addr;
    wire [31:0] inst, mem_data_in, mem_data_out;
    wire [3:0]  mem_write_en;
    reg	       rst_b;
 
    // The clock
-   clock CLK(clk);
+   clock CLK(clk, reg_mem_clk);
 
    // The ARM core
-   arm_core core(.clk(clk), .inst_addr(pc), .inst(inst),
+   arm_top top(.clk(clk), .reg_mem_clk(reg_mem_clk), .inst_addr(pc), .inst(inst),
 		  .mem_addr(mem_addr), .mem_data_in(mem_data_in), .mem_data_out(mem_data_out),
 		  .mem_write_en(mem_write_en),
 		  .halted(halted), .rst_b(rst_b));
@@ -67,7 +68,7 @@ module testbench;
 		   .addr2(mem_addr), .data_in2(mem_data_in),
 		   .data_out2(mem_data_out), .we2(mem_write_en),
 		   .excpt2(), .allow_kernel2(1'b1), .kernel2(),
-		   .rst_b(rst_b), .clk(clk));
+		   .rst_b(rst_b), .clk(reg_mem_clk));
 
 
    initial
@@ -89,15 +90,21 @@ endmodule
 
 // Clock module for the ARM core.  You may increase the clock period
 // if your design requires it.
-module clock(clockSignal);
+module clock(clockSignal, reg_mem_clk);
    parameter start = 0, halfPeriod = 50;
    output    clockSignal;
+   output    reg_mem_clk;
    reg	     clockSignal;
+   reg       reg_mem_clk;
 
-   initial
+   initial begin
      clockSignal = start;
+     reg_mem_clk = start;
+   end
 
-   always
+   always begin
      #halfPeriod clockSignal = ~clockSignal;
+     #3 reg_mem_clk = clockSignal;
+   end
 
 endmodule
